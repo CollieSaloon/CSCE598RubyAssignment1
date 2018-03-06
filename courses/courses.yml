@@ -1,0 +1,6 @@
+---
+4: !ruby/object:Course
+  title: CMPS 150
+  instructor: Steve
+  semester: Fall
+  id: 4

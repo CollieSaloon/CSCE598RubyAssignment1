@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset='UTF-8' /> 
+ </head>
+ <body>
+ <h1>Course I take</h1>
+  <table>
+        <form action="edit/<%=@course.id%>" method="post">
+        <tr>
+                <td>
+                        <label for="title">Title:</label>
+                </td>
+                <td>
+                        <input type="text" name="title" value="<%=@course.title%>"></input>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <label for="title">Instructor:</label>
+                </td>
+                <td>
+                        <input type="text" name="instructor" value="<%=@course.instructor%>"></input>
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <label for="semester">Semester:</label>
+                </td>
+                <td>
+                        <input type="text" name="semester" value="<%=@course.semester%>"></input>
+                </td>
+        </tr>
+        <tr> 
+                <td>
+                        <input type="submit" value="Edit">
+                </td>
+        </tr>
+        </form>
+	 <tr>
+                <td>
+                        <form action="/courses/delete/<%=@course.id%>" method="post">
+                        <input type="submit" value="Delete">
+                        </form>
+                </td>
+        </tr>
+	<tr>
+                <td>
+                        <a href="/courses">Back to Courses</a>
+                </td>
+        </tr>        
+</table>
+ </body>
+</html>

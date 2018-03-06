@@ -1,0 +1,22 @@
+require "sinatra"
+require "./course"
+require "./course_store"
+
+get('/courses') do
+ @courses = []
+erb :index
+end
+
+get('/courses/new') do
+erb :new
+end
+
+post('/courses/create') do
+ 	@course	=	Course.new
+		@course.@tle	=	params['@tle']	
+		@course.instructor	=	params['instructor']	
+		@course.semester	=	params['semester']		@course	=	Course.new
+		@course.@tle	=	params['@tle']	
+		@course.instructor	=	params['instructor']	
+		@course.semester	=	params['semester']	
+end
